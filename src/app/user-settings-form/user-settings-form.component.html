@@ -76,9 +76,12 @@
                 <textarea class="form-control" id="notes" name="notes" rows="3" [(ngModel)]="userSettings.notes"></textarea>
             </div>
         </div>
+        <div [hidden]="!hasError" class="alert alert-danger">
+            {{ errorMessage }}
+        </div>
 
         <button class="btn btn-primary">Send</button>
     </form>
 </div>
 
-{{ form.value | json }}
+<!-- {{ form.value | json }} -->
